@@ -39,7 +39,7 @@ const meals = [
         meal_category: 'soup',
         meal_image: '/images/spicysoup.jpg',
         meal_price: '7.99',
-        meal_count:'25',
+        meal_count:'0',
         rating: '4.0',
         numReviews: '2'
     },

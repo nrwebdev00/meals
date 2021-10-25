@@ -6,6 +6,7 @@ import connectDB from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 import mealRoutes from './routes/mealRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 
@@ -13,12 +14,14 @@ connectDB();
 
 const app = express();
 
+app.use(express.json())
 
 app.get('/', (req, res ) =>{
     res.send('API is Running.... Did you Catch the API.... hmmmmmm......');
 });
 
 app.use('/api/meals', mealRoutes);
+app.use('/api/users', userRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
